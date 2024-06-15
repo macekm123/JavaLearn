@@ -12,5 +12,11 @@ class MountainBike extends Bicycle {
 	public void setHeight(int newValue) {
 		seatHeight = newValue;
 	}
+	
+	public void applyBrake(int decrement) {
+		
+		this.speed -= decrement;
+		
+	}
 
 }

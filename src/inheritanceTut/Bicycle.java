@@ -1,25 +1,27 @@
 package inheritanceTut;
 
-public class Bicycle {
+public abstract class Bicycle {
 	
-	protected int gear;
+	private int gear;
 	protected int speed;
 	
 	public Bicycle (int startSpeed, int startGear) {
 		gear = startGear;
-		speed = startGear;
+		speed = startSpeed;
 	}
 	
 	public void setGear (int newValue) {
 		gear = newValue;
 	}
 	
-	public void applyBrake(int decrement) {
-		speed -= decrement;
-	}
+	public abstract void applyBrake(int decrement);
 	
 	public void speedUp(int increment) {
 		speed += increment;
+	}
+	
+	public int getGear() {
+		return gear;
 	}
 
 }

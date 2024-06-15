@@ -2,15 +2,20 @@ package inheritanceTut;
 
 class DownhillBike extends MountainBike {
 	
-	int wheelSize;
-	
+	private int wheelSize;
+
 	public DownhillBike(int wheelSize, int startHeight, int startSpeed, int startGear) {
 		super(startHeight,startSpeed,startGear);
 		this.wheelSize = wheelSize;
 	}
 	
-	public void changeWheelSize(int newSize) {
-		this.wheelSize = newSize;
+	public int getWheelSize() {
+		return wheelSize;
+	}
+
+	public void setWheelSize(int wheelSize) {
+		this.wheelSize = wheelSize;
 	}
 
 }
+ 
